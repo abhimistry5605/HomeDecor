@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ravi Trading - Luxury Furniture Tailored For You</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-modern.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>Ravi Trading</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#products" class="nav-link">Products</a></li>
+                <li><a href="#why-us" class="nav-link">What We Offer</a></li>
+                <li><a href="#process" class="nav-link">Process</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="#" class="cart-icon">🛒 Cart (0)</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>CURATED LUXURY.<br>PERFECTED FOR YOUR SPACE.</h1>
+            <p>Realize your unique interior vision with Ravi Trading's bespoke luxury furnishings, where every detail is fully customized and expertly restored according to your requirement, validated by two decades of perfected craft.</p>
+            <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get Free Consultation</button>
+        </div>
+        <div class="hero-image">
+            <div class="slideshow-container">
+                <div class="slide active">
+                    <img src="https://m.media-amazon.com/images/I/71edQQK0vsL._AC_UF894,1000_QL80_.jpg" alt="Premium Sofa Fabric">
+                </div>
+                <div class="slide">
+                    <img src="https://cdn.shopify.com/s/files/1/0052/8770/6673/files/Swyft_Home_Location2812-2_600x600.jpg?v=1678444972" alt="Elegant Home Interior">
+                </div>
+                <div class="slide">
+                    <img src="https://5.imimg.com/data5/KW/MI/XD/SELLER-13194771/pure-cotton-sofa-fabric.jpg" alt="Cotton Sofa Fabric">
+                </div>
+                <div class="slide">
+                    <img src="https://www.hometown.in/cdn/shop/files/unstudio-image_2.png?v=1747203008&width=2048" alt="Modern Furniture Design">
+                </div>
+                <div class="slide">
+                    <img src="https://cpimg.tistatic.com/6767427/b/1/modern-curtain-fabric.jpg" alt="Modern Curtain Fabric">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section id="products" class="products">
+        <div class="container-full">
+            <h2 class="section-title">The Curator's Edit</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://dukaan.b-cdn.net/700x700/webp/upload_file_service/47a0336c-21f2-47be-b569-8147d6f5280b/188a9f5ce96641bab4f0abb35cf78c7cr-jpg-960x960.webp" alt="Luxury Sofa">
+                    </div>
+                    <div class="product-info">
+                        <h3>Luxury Sofa</h3>
+
+                        <p class="description">Premium comfort with modern design</p>
+                        <button class="btn btn-secondary" onclick="window.location.href='customizer.html?product=sofa'">Customize</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://m.media-amazon.com/images/I/71ZbcJqC4xL._AC_UF894,1000_QL80_.jpg" alt="Elegant Curtains">
+                    </div>
+                    <div class="product-info">
+                        <h3>Elegant Curtains</h3>
+
+                        <p class="description">Sophisticated window treatments</p>
+                        <button class="btn btn-secondary" onclick="window.location.href='customizer.html?product=curtains'">Customize</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://sonaarts.in/wp-content/uploads/2024/12/81bFcMiU33L._SL1500_-800x800.jpg" alt="Bed Frame">
+                    </div>
+                    <div class="product-info">
+                        <h3>Modern Bed Frame</h3>
+
+                        <p class="description">Sleek design for restful nights</p>
+                        <button class="btn btn-secondary" onclick="window.location.href='customizer.html?product=bed'">Customize</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://assets.myntassets.com/dpr_1.5,q_30,w_400,c_limit,fl_progressive/assets/images/19276386/2022/7/27/b28e0125-06b6-4c40-9875-67bf8148661a1658942227624HOSTAHOMESCream-ColouredGold-TonedSetof5GeometricVelvetSquar1.jpg" alt="Cushions">
+                    </div>
+                    <div class="product-info">
+                        <h3>Comfort Cushions</h3>
+
+                        <p class="description">Soft pillows for cozy spaces</p>
+                        <button class="btn btn-secondary" onclick="window.location.href='customizer.html?product=cushions'">Customize</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://5.imimg.com/data5/SELLER/Default/2023/5/305592918/EY/GS/GG/6461830/vinyl-wallpaper-roll.jpg" alt="Wallpaper">
+                    </div>
+                    <div class="product-info">
+                        <h3>Designer Wallpaper</h3>
+
+                        <p class="description">Transform your walls instantly</p>
+                        <button class="btn btn-secondary" onclick="window.location.href='customizer.html?product=wallpaper'">Customize</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://www.goldmedalindia.com/blog/wp-content/uploads/2025/03/Types-of-Lights-for-Home.jpg" alt="Lamp">
+                    </div>
+                    <div class="product-info">
+                        <h3>Ambient Lighting</h3>
+
+                        <p class="description">Set the perfect mood with light</p>
+                        <button class="btn btn-secondary" onclick="window.location.href='customizer.html?product=lighting'">Customize</button>
+                    </div>
+                </div>
+                
+                <!-- New Product: Side Table -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://fleck.co.in/cdn/shop/files/PerisiCofffeMarbletable-5_a35ab16c-4bea-4b68-80fa-5c7a4fdef2b8.jpg?v=1754892709&width=3840" alt="Side Table">
+                    </div>
+                    <div class="product-info">
+                        <h3>Elegant Side Table</h3>
+
+                        <p class="description">Compact, stylish side table for living spaces</p>
+                        <button class="btn btn-secondary" onclick="window.location.href='customizer.html?product=side-table'">Customize</button>
+                    </div>
+                </div>
+
+                <!-- New Product: Accent Chair -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://image.made-in-china.com/202f0j00VOsinvZIeycM/Luxury-Royal-Elegant-Modern-Home-Furniture-Rocking-Living-Room-Chairs-Set-with-Ottoman.webp" alt="Accent Chair">
+                    </div>
+                    <div class="product-info">
+                        <h3>Accent Chair</h3>
+
+
+
+                        <p class="description">Comfortable accent chair with modern silhouette</p>
+                        <button class="btn btn-secondary" onclick="window.location.href='customizer.html?product=accent-chair'">Customize</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Offer You Section -->
+    <section id="why-us" class="why-us">
+        <div class="container-full">
+            <h2 class="section-title">What We Offer You</h2>
+            <div class="why-us-grid">
+                <div class="why-card">
+                    <div class="why-icon"><img src="https://www.shutterstock.com/image-vector/mastery-icon-logo-isolated-vector-260nw-2637829677.jpg" alt="Masterful Craftsmanship"></div>
+                    <h3>Masterful Craftsmanship</h3>
+                    <p>Made with precision and care by skilled artisans</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><img src="https://c8.alamy.com/comp/2G6JBNM/repair-furniture-color-line-icon-handyman-service-isolated-vector-element-outline-pictogram-for-web-page-mobile-app-promo-2G6JBNM.jpg" alt="Bespoke Design Service"></div>
+                    <h3>Bespoke Design Service</h3>
+                    <p>Tailored designs to match your unique style and space</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><img src="https://media.gettyimages.com/id/2183469997/vector/durable-line-icon-editable-stroke-vector-icon.jpg?s=612x612&w=gi&k=20&c=dt-b0-rb7iMiCGiXanq4KwINCF9v9bwrfpEOWEjgc1o=" alt="Enduring Quality Materials"></div>
+                    <h3>Enduring Quality Materials</h3>
+                    <p>Durable, elegant materials with fine finishing</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><img src="https://thumbs.dreamstime.com/b/real-estate-business-investment-vector-icon-set-design-221406684.jpg" alt="Value in Every Investment"></div>
+                    <h3>Value in Every Investment</h3>
+                    <p>High-quality craftsmanship within your budget</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Process Section -->
+    <section id="process" class="our-process">
+        <div class="container-full">
+            <h2 class="section-title">Our Process</h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <img src="https://static.vecteezy.com/system/resources/previews/026/503/269/non_2x/consulting-icon-outline-icon-free-vector.jpg" alt="Consultation">
+                    <h3>Consultation</h3>
+                    <p>Discuss your needs with our experts</p>
+                </div>
+                <div class="process-arrow">→</div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/065/384/979/small_2x/couch-icon-set-a-stylish-couch-icon-set-perfect-for-interior-design-home-decor-and-furniture-related-projects-the-set-includes-line-color-and-solid-styles-to-suit-various-design-needs-vector.jpg" alt="Design & Selection">
+                    <h3>Design & Selection</h3>
+                    <p>Choose materials, colors & design</p>
+                </div>
+                <div class="process-arrow">→</div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <img src="https://thumbs.dreamstime.com/b/manufacturing-icon-line-design-manufacturing-production-factory-assembly-industry-automation-machinery-manufacturing-icon-365760836.jpg" alt="Manufacturing">
+                    <h3>Manufacturing</h3>
+                    <p>Expert craftsmanship creates your furniture</p>
+                </div>
+                <div class="process-arrow">→</div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <img src="https://t4.ftcdn.net/jpg/03/28/70/43/360_F_328704316_RTO4VnzyKmFcFWofmxc9AMf7ebrZ8KBP.jpg" alt="Delivery & Setup">
+                    <h3>Delivery & Setup</h3>
+                    <p>Professional installation in your space</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Success Stories -->
+    <section id="client-success" class="client-success">
+        <div class="container-full">
+            <h2 class="section-title">Client Success Stories</h2>
+            <div class="trust-metric">
+                <div class="stars">★★★★☆</div>
+                <p>4.5 / 5 Stars <span>Based on 150 Verified Clients</span></p>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="quote-mark">"</div>
+                    <p class="review-text">"Ravi Trading transformed our living room into a masterpiece. Their attention to detail and craftsmanship exceeded our expectations. The sofa set they created is not just furniture; it's a work of art."</p>
+                    <div class="reviewer">
+                        <img src="https://www.shutterstock.com/image-vector/happy-client-icon-vector-logotype-260nw-1803878125.jpg" alt="Client Avatar" class="client-avatar">
+                        <span>— Shreeraj Patil, Surat</span>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="quote-mark">"</div>
+                    <p class="review-text">"From consultation to delivery, the entire process was seamless. The team understood our vision perfectly and delivered custom curtains that perfectly complement our home decor."</p>
+                    <div class="reviewer">
+                        <img src="https://www.shutterstock.com/image-vector/happy-client-icon-vector-logotype-260nw-1803878125.jpg" alt="Client Avatar" class="client-avatar">
+                        <span>— Rajesh Mehta, Vadodara</span>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="quote-mark">"</div>
+                    <p class="review-text">"The bespoke bed frame they crafted for us is absolutely stunning. The quality of materials and the precision in design make it a centerpiece of our bedroom. Highly recommended!"</p>
+                    <div class="reviewer">
+                        <img src="https://www.shutterstock.com/image-vector/happy-client-icon-vector-logotype-260nw-1803878125.jpg" alt="Client Avatar" class="client-avatar">
+                        <span>— Meera Patel, Pune</span>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="quote-mark">"</div>
+                    <p class="review-text">"Working with Ravi Trading was a delightful experience. Their expertise in home decor and commitment to excellence resulted in beautiful accent chairs that elevate our space."</p>
+                    <div class="reviewer">
+                        <img src="https://www.shutterstock.com/image-vector/happy-client-icon-vector-logotype-260nw-1803878125.jpg" alt="Client Avatar" class="client-avatar">
+                        <span>— Shital Patel, Vapi</span>
+                    </div>
+                </div>
+            </div>
+            <hr class="section-separator">
+            <div class="affirmation">
+                <p><strong>Your vision</strong>, <strong>our dedication</strong>. We translate your desire for <strong>luxury</strong> and <strong>precision</strong> into reality, every time.</p>
+                <a href="portfolio.html" class="portfolio-link">Explore Our Full Portfolio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container-full">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Your Phone" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+                <div class="contact-info">
+                    <h3>Contact Info</h3>
+                    <div class="info-item">
+                        <span class="info-icon">📍</span>
+                        <div>
+                            <h4>Address</h4>
+                            <p>Shop - 3 SnehSmrithi Complex Near Dhanmora Complex<br>Adajan -  Rd, Surat - 394210, Gujarat</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">📞</span>
+                        <div>
+                            <h4>Phone</h4>
+                            <p><a href="tel:+918799236457">+91 8799 236457</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">✉️</span>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:info@homedecor.com">ravitrading005@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">YouTube</a>
+                        <a href="#" class="social-link">Pinterest</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container-full">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#">Sofa Sets</a></li>
+                        <li><a href="#">Dining Tables</a></li>
+                        <li><a href="#">Beds</a></li>
+                        <li><a href="#">Accent Chairs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Custom Furniture</a></li>
+                        <li><a href="#">Our Projects</a></li>
+                        <li><a href="#">Blogs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ravi Trading. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script-modern.js"></script>
+</body>
+</html>

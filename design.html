@@ -1,0 +1,262 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ravi Trading - Your Perfect Home Awaits</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-modern.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>Ravi Trading</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#products" class="nav-link">Products</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#cart" class="cart-icon">🛒 Cart</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <!-- Animated Background Elements -->
+        <div class="hero-background">
+            <div class="sofa animated" style="animation-delay: 0s;">🛋️</div>
+            <div class="curtain animated" style="animation-delay: 1s;">🪟</div>
+            <div class="plant animated" style="animation-delay: 2s;">🌿</div>
+            <div class="lamp animated" style="animation-delay: 0.5s;">💡</div>
+            <div class="frame animated" style="animation-delay: 1.5s;">🖼️</div>
+        </div>
+        
+        <div class="hero-content">
+            <h2>Welcome to Ravi Trading</h2>
+            <p>Transform Your Living Space Into Your Dream Home</p>
+            <button class="btn btn-primary" onclick="scrollToSection('#products')">Shop Now</button>
+        </div>
+        
+        <!-- Services Info -->
+        <div class="services-info">
+            <div class="service-card">
+                <span class="service-icon">🎨</span>
+                <h3>Interior Design</h3>
+                <p>Expert design consultation to match your style</p>
+            </div>
+            <div class="service-card">
+                <span class="service-icon">📦</span>
+                <h3>Fast Delivery</h3>
+                <p>Quick and secure shipping to your doorstep</p>
+            </div>
+            <div class="service-card">
+                <span class="service-icon">💰</span>
+                <h3>Best Prices</h3>
+                <p>Affordable luxury without compromising quality</p>
+            </div>
+            <div class="service-card">
+                <span class="service-icon">🤝</span>
+                <h3>Customer Support</h3>
+                <p>24/7 assistance for all your decor needs</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sign Up/Login Screen -->
+    <div id="auth" class="screen">
+        <div class="auth-container">
+            <h2>Sign Up / Login</h2>
+            <input type="email" placeholder="Email" id="email">
+            <input type="password" placeholder="Password" id="password">
+            <button id="login-btn">Login</button>
+            <button id="signup-btn">Sign Up</button>
+            <button id="social-login">Social Login</button>
+            <button id="guest-access">Continue as Guest</button>
+        </div>
+    </div>
+
+    <!-- Home/Dashboard Screen -->
+    <div id="app-dashboard" class="screen">
+        <header class="app-header">
+            <h1>Ravi Trading</h1>
+            <input type="text" placeholder="Search..." class="search-bar">
+        </header>
+        <div class="categories">
+            <div class="category">Furniture</div>
+            <div class="category">Lighting</div>
+            <div class="category">Wall Art</div>
+            <div class="category">Plants</div>
+            <div class="category">Rugs</div>
+        </div>
+        <div class="carousel">
+            <h3>Featured Products</h3>
+            <!-- Carousel items -->
+        </div>
+        <div class="discount-banner">
+            <p>50% Off on Selected Items!</p>
+        </div>
+        <nav class="bottom-nav">
+            <div class="nav-item active" data-screen="app-dashboard">Home</div>
+            <div class="nav-item" data-screen="products">Products</div>
+            <div class="nav-item" data-screen="cart">Cart</div>
+            <div class="nav-item" data-screen="profile">Profile</div>
+        </nav>
+    </div>
+
+    <!-- Product Listing Screen -->
+    <div id="products" class="screen">
+        <header class="app-header">
+            <button class="back-btn">←</button>
+            <h1>Products</h1>
+            <div class="filter-sort">
+                <button>Filter</button>
+                <button>Sort</button>
+            </div>
+        </header>
+        <div class="product-grid">
+            <!-- Product cards -->
+        </div>
+    </div>
+
+    <!-- Product Detail Screen -->
+    <div id="product-detail" class="screen">
+        <header class="app-header">
+            <button class="back-btn">←</button>
+            <h1>Product Detail</h1>
+            <button class="favorite-btn">♥</button>
+        </header>
+        <div class="product-images">
+            <!-- High-quality images with zoom -->
+        </div>
+        <div class="product-info">
+            <h2>Product Name</h2>
+            <p class="price">$99.99</p>
+            <p class="description">Detailed description...</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="reviews">
+            <!-- Reviews -->
+        </div>
+        <div class="similar-products">
+            <!-- Similar products -->
+        </div>
+    </div>
+
+    <!-- AR Room Screen -->
+    <div id="ar-room" class="screen">
+        <header class="app-header">
+            <button class="back-btn">←</button>
+            <h1>AR Room</h1>
+        </header>
+        <div class="ar-view">
+            <p>AR Camera View - Place furniture here</p>
+            <button class="place-item">Place Item</button>
+            <button class="rotate">Rotate</button> 
+            <button class="resize">Resize</button>
+        </div>
+    </div>
+
+    <!-- DIY/Inspiration Screen -->
+    <div id="diy" class="screen">
+        <header class="app-header">
+            <button class="back-btn">←</button>
+            <h1>DIY & Inspiration</h1>
+        </header>
+        <div class="content-grid">
+            <!-- Images, videos, tips -->
+        </div>
+    </div>
+
+    <!-- Cart Screen -->
+    <div id="cart" class="screen">
+        <header class="app-header">
+            <button class="back-btn">←</button>
+            <h1>Cart</h1>
+        </header>
+        <div class="cart-items">
+            <!-- Selected items -->
+        </div>
+        <div class="cart-summary">
+            <p>Total: $199.99</p>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Checkout Screen -->
+    <div id="checkout" class="screen">
+        <header class="app-header">
+            <button class="back-btn">←</button>
+            <h1>Checkout</h1>
+        </header>
+        <form class="checkout-form">
+            <input type="text" placeholder="Delivery Address">
+            <div class="payment-options">
+                <button>Credit Card</button>
+                <button>PayPal</button>
+            </div>
+            <div class="order-summary">
+                <!-- Order details -->
+            </div>
+            <button class="confirm-btn">Confirm Order</button>
+        </form>
+    </div>
+
+    <!-- User Profile Screen -->
+    <div id="profile" class="screen">
+        <header class="app-header">
+            <button class="back-btn">←</button>
+            <h1>Profile</h1>
+        </header>
+        <div class="profile-info">
+            <p>Name: John Doe</p>
+            <p>Email: john@example.com</p>
+        </div>
+        <div class="profile-menu">
+            <div>Wishlist</div>
+            <div>Order History</div>
+            <div>Settings</div>
+            <div>Logout</div>
+        </div>
+    </div>
+
+    <!-- Notifications/Offers Screen -->
+    <div id="notifications" class="screen">
+        <header class="app-header">
+            <button class="back-btn">←</button>
+            <h1>Notifications</h1>
+        </header>
+        <div class="notification-list">
+            <!-- Notifications and offers -->
+        </div>
+    </div>
+
+    <!-- Chat/Support Screen -->
+    <div id="chat" class="screen">
+        <header class="app-header">
+            <button class="back-btn">←</button>
+            <h1>Support</h1>
+        </header>
+        <div class="chat-window">
+            <!-- Chat messages -->
+        </div>
+        <input type="text" placeholder="Type your message..." class="chat-input">
+    </div>
+
+    <!-- Blog/Articles Screen -->
+    <div id="blog" class="screen">
+        <header class="app-header">
+            <button class="back-btn">←</button>
+            <h1>Blog</h1>
+        </header>
+        <div class="article-list">
+            <!-- Articles -->
+        </div>
+    </div>
+
+    <script src="script-modern.js"></script>
+</body>
+</html>

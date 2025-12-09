@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Curator's Edit - Ravi Trading</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="customizer.css">
+    <style>
+        .curator-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        .curator-visualizer {
+            flex: 1;
+            text-align: center;
+        }
+
+        .curator-image {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .curator-options {
+            flex: 1;
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .curator-title {
+            font-size: 2.5rem;
+            font-family: 'Playfair Display', serif;
+            color: #1E3F66;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .curator-subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .color-palette {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .color-swatch {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 3px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .color-swatch:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .color-swatch.selected {
+            border-color: #1E3F66;
+            transform: scale(1.05);
+        }
+
+        .color-name {
+            text-align: center;
+            margin-top: 8px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .back-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #1E3F66;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .back-btn:hover {
+            background: #2a4a7a;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .curator-container {
+                flex-direction: column;
+            }
+
+            .curator-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>Ravi Trading</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#products" class="nav-link">Products</a></li>
+                <li><a href="index.html#why-us" class="nav-link">What We Offer</a></li>
+                <li><a href="index.html#process" class="nav-link">Process</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Curator's Edit Section -->
+    <section class="curator-edit">
+        <div class="curator-container">
+            <!-- Visualizer Column -->
+            <div class="curator-visualizer">
+                <img id="curatorImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRRQwCDKnKQeWhpvsz6qLNEs378SDmNnJRfA&s" alt="Curator's Edit Product" class="curator-image">
+            </div>
+
+            <!-- Options Column -->
+            <div class="curator-options">
+                <h2 class="curator-title">The Curator's Edit</h2>
+                <p class="curator-subtitle">Customize your curated piece with premium options</p>
+
+                <!-- Color Selection -->
+                <div class="option-group">
+                    <h4>Color Palette</h4>
+                    <div class="color-palette">
+                        <div class="color-swatch" data-color="#D4AF37" onclick="selectColor(this)" style="background-color: #D4AF37;">
+                            <div class="color-name">Gold</div>
+                        </div>
+                        <div class="color-swatch" data-color="#1E3F66" onclick="selectColor(this)" style="background-color: #1E3F66;">
+                            <div class="color-name">Navy</div>
+                        </div>
+                        <div class="color-swatch" data-color="#FFFFFF" onclick="selectColor(this)" style="background-color: #FFFFFF; border: 2px solid #ddd;">
+                            <div class="color-name">White</div>
+                        </div>
+                        <div class="color-swatch" data-color="#8B4513" onclick="selectColor(this)" style="background-color: #8B4513;">
+                            <div class="color-name">Brown</div>
+                        </div>
+                        <div class="color-swatch" data-color="#006466" onclick="selectColor(this)" style="background-color: #006466;">
+                            <div class="color-name">Teal</div>
+                        </div>
+                        <div class="color-swatch" data-color="#FF0000" onclick="selectColor(this)" style="background-color: #FF0000;">
+                            <div class="color-name">Red</div>
+                        </div>
+                        <div class="color-swatch" data-color="#00FF00" onclick="selectColor(this)" style="background-color: #00FF00;">
+                            <div class="color-name">Green</div>
+                        </div>
+                        <div class="color-swatch" data-color="#0000FF" onclick="selectColor(this)" style="background-color: #0000FF;">
+                            <div class="color-name">Blue</div>
+                        </div>
+                        <div class="color-swatch" data-color="#FFFF00" onclick="selectColor(this)" style="background-color: #FFFF00;">
+                            <div class="color-name">Yellow</div>
+                        </div>
+                        <div class="color-swatch" data-color="#FF69B4" onclick="selectColor(this)" style="background-color: #FF69B4;">
+                            <div class="color-name">Pink</div>
+                        </div>
+                        <div class="color-swatch" data-color="#800080" onclick="selectColor(this)" style="background-color: #800080;">
+                            <div class="color-name">Purple</div>
+                        </div>
+                        <div class="color-swatch" data-color="#FFA500" onclick="selectColor(this)" style="background-color: #FFA500;">
+                            <div class="color-name">Orange</div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="customizer.html" class="back-btn">← Back to Customizer</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function selectColor(element) {
+            // Remove selected class from all swatches
+            document.querySelectorAll('.color-swatch').forEach(swatch => {
+                swatch.classList.remove('selected');
+            });
+
+            // Add selected class to clicked swatch
+            element.classList.add('selected');
+
+            // Get the selected color
+            const selectedColor = element.getAttribute('data-color');
+
+            // Apply color overlay to the image
+            const image = document.getElementById('curatorImage');
+            image.style.filter = `sepia(1) hue-rotate(${getHueRotation(selectedColor)}deg) saturate(2)`;
+        }
+
+        function getHueRotation(color) {
+            // Convert hex color to HSL and return hue rotation
+            const hex = color.replace('#', '');
+            const r = parseInt(hex.substr(0, 2), 16) / 255;
+            const g = parseInt(hex.substr(2, 2), 16) / 255;
+            const b = parseInt(hex.substr(4, 2), 16) / 255;
+
+            const max = Math.max(r, g, b);
+            const min = Math.min(r, g, b);
+            let h;
+
+            if (max === min) {
+                h = 0; // achromatic
+            } else {
+                const d = max - min;
+                switch (max) {
+                    case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+                    case g: h = (b - r) / d + 2; break;
+                    case b: h = (r - g) / d + 4; break;
+                }
+                h /= 6;
+            }
+
+            return h * 360;
+        }
+    </script>
+</body>
+</html>

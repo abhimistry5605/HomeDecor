@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customize Your Product - Ravi Trading</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="customizer.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>Ravi Trading</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#products" class="nav-link">Products</a></li>
+                <li><a href="index.html#why-us" class="nav-link">What We Offer</a></li>
+                <li><a href="index.html#process" class="nav-link">Process</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Customizer Section -->
+    <section class="customizer">
+        <div class="customizer-container">
+            <!-- Visualizer Column -->
+            <div class="visualizer-column">
+                <div class="product-visualizer">
+                    <img id="product-visualizer" src="https://dukaan.b-cdn.net/700x700/webp/upload_file_service/47a0336c-21f2-47be-b569-8147d6f5280b/188a9f5ce96641bab4f0abb35cf78c7cr-jpg-960x960.webp" alt="Customizable Product">
+                    <div class="product-title">
+                        <h2 id="productName">Luxury Sofa</h2>
+                </div>
+            </div>
+
+            <!-- Options Column -->
+            <div class="options-column">
+                <div class="customization-options">
+                    <h3>Customize Your Product</h3>
+
+                    <div class="option-group">
+                        <h4>Color Plates</h4>
+                        <div class="color-options">
+                            <div class="color-option" style="background-color: #8B4513;" data-color="#8B4513">Brown</div>
+                            <div class="color-option" style="background-color: #000000;" data-color="#000000">Black</div>
+                            <div class="color-option" style="background-color: #FFFFFF;" data-color="#FFFFFF">White</div>
+                            <div class="color-option" style="background-color: #FFD700;" data-color="#FFD700">Gold</div>
+                            <div class="color-option" style="background-color: #1E3F66;" data-color="#1E3F66">Navy</div>
+                            <div class="color-option" style="background-color: #D4AF37;" data-color="#D4AF37">Beige</div>
+                        </div>
+                    </div>
+
+                    <div class="option-group">
+                        <h4>Fabric Selection</h4>
+                        <div class="material-options">
+                            <div class="material-option" data-material="leather">
+                                <img src="https://via.placeholder.com/60x60/8B4513/FFFFFF?text=L" alt="Leather">
+                                <span>Leather</span>
+                            </div>
+                            <div class="material-option" data-material="velvet">
+                                <img src="https://via.placeholder.com/60x60/800080/FFFFFF?text=V" alt="Velvet">
+                                <span>Velvet</span>
+                            </div>
+                            <div class="material-option" data-material="linen">
+                                <img src="https://via.placeholder.com/60x60/F5F5DC/000000?text=Ln" alt="Linen">
+                                <span>Linen</span>
+                            </div>
+                            <div class="material-option" data-material="cotton">
+                                <img src="https://via.placeholder.com/60x60/FFFFFF/000000?text=C" alt="Cotton">
+                                <span>Cotton</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="option-group">
+                        <h4>Dimensions</h4>
+                        <div class="dimension-controls">
+                            <div class="dimension-input">
+                                <label for="width">Width: <span id="width-value">180</span> cm</label>
+                                <input type="range" id="width" min="120" max="300" value="180">
+                            </div>
+                            <div class="dimension-input">
+                                <label for="height">Height: <span id="height-value">85</span> cm</label>
+                                <input type="range" id="height" min="60" max="120" value="85">
+                            </div>
+                            <div class="dimension-input">
+                                <label for="depth">Depth: <span id="depth-value">90</span> cm</label>
+                                <input type="range" id="depth" min="60" max="120" value="90">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="option-group">
+                        <h4>Finishing</h4>
+                        <div class="finishing-options">
+                            <div class="finishing-option" data-finishing="standard">
+                                <img src="https://via.placeholder.com/50x50/C0C0C0/000000?text=S" alt="Standard">
+                                <span>Standard</span>
+                            </div>
+                            <div class="finishing-option" data-finishing="premium">
+                                <img src="https://via.placeholder.com/50x50/FFD700/000000?text=P" alt="Premium">
+                                <span>Premium</span>
+                            </div>
+                            <div class="finishing-option" data-finishing="luxury">
+                                <img src="https://via.placeholder.com/50x50/D4AF37/000000?text=L" alt="Luxury">
+                                <span>Luxury</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-summary">
+                        <h4>Price Summary</h4>
+                        <div class="price-breakdown">
+                            <div class="price-item">
+                                <span>Base Price:</span>
+                                <span>$1,200</span>
+                            </div>
+                            <div class="price-item">
+                                <span>Material:</span>
+                                <span id="material-price">$0</span>
+                            </div>
+                            <div class="price-item">
+                                <span>Finishing:</span>
+                                <span id="finishing-price">$0</span>
+                            </div>
+                            <div class="price-item total">
+                                <span>Total:</span>
+                                <span id="total-price">$1,200</span>
+                            </div>
+                        </div>
+                        <button class="cta-button">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="customizer.js"></script>
+</body>
+</html>
+
+            
+
+                   
+               
+
+                   
+                       
+
+                   
