@@ -44,22 +44,7 @@ const productData = {
     curtains: {
         name: "Elegant Curtains",
         basePrice: 8000,
-        images: [
-            "https://m.media-amazon.com/images/I/71eR5BTXrsL._AC_UF1000,1000_QL80_.jpg",
-            "https://5.imimg.com/data5/SELLER/Default/2025/3/494125570/KT/NL/SV/47263243/polyester-curtain-fabric-500x500.jpg",
-            "https://images-eu.ssl-images-amazon.com/images/I/81xICELnQWL._AC_UL600_SR600,600_.jpg"
-        ],
-        materials: [
-            { name: "Italian Wool Blend", img: "https://5.imimg.com/data5/KW/MI/XD/SELLER-13194771/pure-cotton-sofa-fabric.jpg", price: 2000 },
-            { name: "Aged Full-Grain Leather", img: "https://m.media-amazon.com/images/I/71edQQK0vsL._AC_UF894,1000_QL80_.jpg", price: 4000 },
-            { name: "Sustainable Belgian Linen", img: "https://cpimg.tistatic.com/6767427/b/1/modern-curtain-fabric.jpg", price: 1500 },
-            { name: "Performance Velvet", img: "https://assets.myntassets.com/dpr_1.5,q_30,w_400,c_limit,fl_progressive/assets/images/19276386/2022/7/27/b28e0125-06b6-4c40-9875-67bf8148661a1658942227624HOSTAHOMESCream-ColouredGold-TonedSetof5GeometricVelvetSquar1.jpg", price: 2500 },
-            { name: "Italian Silk-Blend Velvet", img: "images/fabric-texture.jpg", price: 3000 },
-            { name: "Belgian Textured Linen", img: "images/linen-texture.jpg", price: 2000 },
-            { name: "Full-Grain Aniline Leather", img: "images/leather-texture.jpg", price: 3500 },
-            { name: "Heirloom Basketweave Chenille", img: "images/fabric-texture.jpg", price: 2500 },
-            { name: "Cashmere-Wool Blend Tweed", img: "images/fabric-texture.jpg", price: 3000 }
-        ],
+        mainImage: "https://cpimg.tistatic.com/6767427/b/1/modern-curtain-fabric.jpg",
         colors: [
             { hex: "#D4AF37", name: "Deep Obsidian" },
             { hex: "#1E3F66", name: "Midnight Navy" },
@@ -86,16 +71,13 @@ const productData = {
         name: "Modern Bed Frame",
         basePrice: 35000,
         images: [
-            "https://m.media-amazon.com/images/I/61zSkdeTTEL._AC_UF894,1000_QL80_.jpg",
-            "https://down-my.img.susercontent.com/file/my-11134207-820le-meatp7tuxiwze2",
-            "https://originmattress.co.uk/wp-content/uploads/2024/10/UK-Timber-Bed-Frame-Dimensions.png",
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRRQwCDKnKQeWhpvsz6qLNEs378SDmNnJRfA&s"
+            "https://images-cdn.ubuy.co.in/63e1e4a7b482a80ac73f6721-allewie-queen-size-velvet-platform-bed.jpg"
         ],
-        Frame materials: [
+        "Frame materials": [
             { name: "The Lumina Bed (Upholstery)", img: "https://5.imimg.com/data5/KW/MI/XD/SELLER-13194771/pure-cotton-sofa-fabric.jpg", price: 4000 },
             { name: "The Axis Platform (Wood)", img: "https://m.media-amazon.com/images/I/71edQQK0vsL._AC_UF894,1000_QL80_.jpg", price: 6000 },
             { name: "The Zephyr Canopy (Metal)", img: "https://cpimg.tistatic.com/6767427/b/1/modern-curtain-fabric.jpg", price: 3000 },
-            { name: "The Meridian Frame (Mixed Material", img: "https://assets.myntassets.com/dpr_1.5,q_30,w_400,c_limit,fl_progressive/assets/images/19276386/2022/7/27/b28e0125-06b6-4c40-9875-67bf8148661a1658942227624HOSTAHOMESCream-ColouredGold-TonedSetof5GeometricVelvetSquar1.jpg", price: 3500 }
+            { name: "The Meridian Frame (Mixed Material)", img: "https://assets.myntassets.com/dpr_1.5,q_30,w_400,c_limit,fl_progressive/assets/images/19276386/2022/7/27/b28e0125-06b6-4c40-9875-67bf8148661a1658942227624HOSTAHOMESCream-ColouredGold-TonedSetof5GeometricVelvetSquar1.jpg", price: 3500 }
         ],
         colors: [
             { hex: "#D4AF37", name: "Deep Obsidian" },
@@ -290,7 +272,7 @@ function loadProduct(productKey) {
     document.getElementById('productName').textContent = product.name;
 
     // Update product image or slideshow
-    const visualizer = document.getElementById('product-visualizer');
+    const visualizer = document.getElementById('mainCurtainImage');
     const slideshowContainer = document.querySelector('.product-visualizer');
 
     // Remove existing slideshow controls if any
@@ -323,7 +305,7 @@ function loadProduct(productKey) {
         console.log('Slideshow controls added');
     } else {
         // Single image
-        visualizer.src = product.image || 'https://dukaan.b-cdn.net/700x700/webp/upload_file_service/47a0336c-21f2-47be-b569-8147d6f5280b/188a9f5ce96641bab4f0abb35cf78c7cr-jpg-960x960.webp';
+        visualizer.src = product.mainImage || product.image || 'https://dukaan.b-cdn.net/700x700/webp/upload_file_service/47a0336c-21f2-47be-b569-8147d6f5280b/188a9f5ce96641bab4f0abb35cf78c7cr-jpg-960x960.webp';
 
         // Add zoom for specific products
         if (productKey === 'accent-chair') {
@@ -340,16 +322,18 @@ function loadProduct(productKey) {
     // Update materials
     const materialOptions = document.querySelector('.material-options');
     materialOptions.innerHTML = '';
-    product.materials.forEach(material => {
-        const option = document.createElement('div');
-        option.className = 'material-option';
-        option.setAttribute('data-material', material.name.toLowerCase().replace(' ', '-'));
-        option.innerHTML = `
-            <img src="${material.img}" alt="${material.name}" style="width: 100px; height: 100px;">
-            <span>${material.name}</span>
-        `;
-        materialOptions.appendChild(option);
-    });
+    if (product.materials) {
+        product.materials.forEach(material => {
+            const option = document.createElement('div');
+            option.className = 'material-option';
+            option.setAttribute('data-material', material.name.toLowerCase().replace(' ', '-'));
+            option.innerHTML = `
+                <img src="${material.img}" alt="${material.name}" style="width: 100px; height: 100px;">
+                <span>${material.name}</span>
+            `;
+            materialOptions.appendChild(option);
+        });
+    }
 
     // Update colors
     const colorOptions = document.querySelector('.color-options');

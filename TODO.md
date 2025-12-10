@@ -1,14 +1,12 @@
-# TODO List for Brand Name Update
+# TODO: Modify Curtain Customizer
 
-## 1. Update index.html ✅
-- Change footer copyright from "Home Decor" to "Ravi Trading"
+## Tasks
+- [ ] Update customizer.html: Change main image ID to "mainCurtainImage"
+- [ ] Update customizer.html: Replace dimensions section with length and width sliders (IDs: lengthSlider, widthSlider) and value displays (IDs: lengthValue, widthValue)
+- [ ] Update customizer.js: Add mainImage URL to curtains object
+- [ ] Update customizer.js: Modify loadProduct to set main image src for curtains
+- [ ] Update customizer.js: Update dimension event listeners to use length and width sliders
 
-## 2. Update design.html ✅
-- Remove duplicate header in app-dashboard section
-- Update hero content from "Welcome to Home Decor" to "Welcome to Ravi Trading"
-- Clean up any redundant code lines or duplicates
-
-## 3. Followup steps ✅
-- Verify all changes are applied correctly
-- Ensure no duplicate or redundant lines remain
-- Confirm brand name consistency across files
+## Followup Steps
+- [ ] Test by opening customizer.html?product=curtains
+- [ ] Verify sliders update values in real-time
